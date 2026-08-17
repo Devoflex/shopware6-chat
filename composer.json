@@ -1,0 +1,48 @@
+{
+    "name": "chatixy/shopware6-chat",
+    "description": "Chatixy AI chat widget for Shopware 6 - no-code storefront install.",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "keywords": [
+        "chatixy",
+        "chat",
+        "ai-chat",
+        "live-chat",
+        "widget",
+        "customer-support",
+        "shopware"
+    ],
+    "homepage": "https://chatixy.com/integrations/shopware",
+    "authors": [
+        {
+            "name": "Chatixy",
+            "homepage": "https://chatixy.com"
+        }
+    ],
+    "support": {
+        "email": "support@chatixy.com",
+        "issues": "https://chatixy.com/support"
+    },
+    "require": {
+        "shopware/core": "~6.5.0 || ~6.6.0 || ~6.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chatixy\\Chat\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "Chatixy\\Chat\\ChatixyChat",
+        "label": {
+            "en-GB": "Chatixy AI Chat",
+            "de-DE": "Chatixy AI Chat"
+        },
+        "description": {
+            "en-GB": "Add the Chatixy AI chat widget to your storefront - paste your widget key, no code.",
+            "de-DE": "Fügen Sie das Chatixy-KI-Chat-Widget zu Ihrem Storefront hinzu - Widget-Key einfügen, kein Code."
+        },
+        "manufacturerLink": {
+            "en-GB": "https://chatixy.com"
+        }
+    }
+}

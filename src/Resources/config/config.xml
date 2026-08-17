@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>Chatixy AI Chat</title>
+        <title lang="de-DE">Chatixy AI Chat</title>
+
+        <input-field type="bool">
+            <name>active</name>
+            <label>Enable Chatixy widget</label>
+            <label lang="de-DE">Chatixy-Widget aktivieren</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>widgetKey</name>
+            <label>Widget key</label>
+            <label lang="de-DE">Widget-Key</label>
+            <helpText>Paste your Chatixy widget key (or the whole embed snippet - we extract the key). Find it in your Chatixy dashboard under Install.</helpText>
+            <helpText lang="de-DE">Fügen Sie Ihren Chatixy-Widget-Key ein (oder das gesamte Embed-Snippet). Im Chatixy-Dashboard unter „Install“ zu finden.</helpText>
+        </input-field>
+
+        <!--
+            The "Chatixy host (advanced)" field was removed deliberately.
+            ChatixyKey::sanitizeHost() now pins every host to an https
+            chatixy.com origin, so the field could no longer change anything,
+            and an editable value that feeds the storefront <script src> is
+            exactly the sink a CSRF on this form would aim at. The
+            ChatixyChat.config.host key itself is still read by the storefront
+            template, so a value left behind by an earlier version keeps
+            resolving - pinned like everything else.
+        -->
+    </card>
+</config>

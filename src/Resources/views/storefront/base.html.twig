@@ -1,0 +1,16 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{# Append the Chatixy async loader at the end of the <body> on every storefront
+   page, gated by the plugin config. The loader is position:fixed, so placement
+   doesn't matter; body-end keeps it out of the critical render path. #}
+{% block base_body_inner %}
+    {{ parent() }}
+
+    {# `host` no longer has a config-card field, but an upgraded shop can still
+       hold a system_config row on that key. We keep passing it so ChatixyKey
+       pins it: whatever is stored, the emitted src is an https chatixy.com
+       origin or nothing at all. #}
+    {% if config('ChatixyChat.config.active') %}
+        {{ chatixy_loader(config('ChatixyChat.config.widgetKey'), config('ChatixyChat.config.host')) }}
+    {% endif %}
+{% endblock %}
