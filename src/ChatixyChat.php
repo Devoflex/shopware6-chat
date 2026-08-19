@@ -5,7 +5,7 @@ namespace Chatixy\Chat;
 use Shopware\Core\Framework\Plugin;
 
 /**
- * Chatixy AI Chat - Shopware 6 plugin entry point.
+ * Chatixy AI Support Agent - Shopware 6 plugin entry point.
  *
  * The plugin needs no install/activate lifecycle code: the storefront loader is
  * injected by a Twig template that extends `@Storefront/storefront/base.html.twig`

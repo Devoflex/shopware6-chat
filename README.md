@@ -1,6 +1,6 @@
-# Chatixy AI Chat - Shopware 6 plugin
+# Chatixy AI Support Agent - Shopware 6 plugin
 
-Adds the [Chatixy](https://chatixy.com) AI chat widget to every page of a
+Adds the [Chatixy](https://chatixy.com) AI support agent to every page of a
 [Shopware 6](https://www.shopware.com) storefront. Install the plugin, activate
 it, paste your widget key. No theme fork, no template override to maintain, no
 snippet to paste into a CMS block.
@@ -23,8 +23,8 @@ bin/console cache:clear
 ```
 
 Then open the Administration and go to
-**Extensions -> My extensions -> Chatixy AI Chat -> Config**. Leave
-**Enable Chatixy widget** on (it defaults to on), paste the **Widget key** from
+**Extensions -> My extensions -> Chatixy AI Support Agent -> Config**. Leave
+**Enable Chatixy support agent** on (it defaults to on), paste the **Widget key** from
 your Chatixy dashboard, and save.
 
 The key field accepts any of the three shapes the dashboard hands out:
@@ -68,7 +68,7 @@ keeps it out of the critical render path without changing where it appears.
   activate / uninstall lifecycle code - the config card plus the template are
   the entire plugin.
 - **No Administration code.** The template extends the storefront base only, so
-  the widget never renders inside the admin.
+  the support agent never renders inside the admin.
 - **Nothing at all when it is not configured.** If the enable switch is off, or
   the stored value contains no valid 64-character hex key, the Twig helper
   returns an empty string and no tag is emitted.

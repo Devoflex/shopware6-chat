@@ -2,13 +2,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
     <card>
-        <title>Chatixy AI Chat</title>
-        <title lang="de-DE">Chatixy AI Chat</title>
+        <title>Chatixy AI Support Agent</title>
+        <title lang="de-DE">Chatixy AI Support Agent</title>
 
         <input-field type="bool">
             <name>active</name>
-            <label>Enable Chatixy widget</label>
-            <label lang="de-DE">Chatixy-Widget aktivieren</label>
+            <label>Enable Chatixy support agent</label>
+            <label lang="de-DE">Chatixy Support Agent aktivieren</label>
             <defaultValue>true</defaultValue>
         </input-field>
 
